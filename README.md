@@ -66,8 +66,8 @@ Nous allons également faire des algorithmes supervisés :
 - Le Random Forest
 - Le decision Tree Classifier 
 - Le Xgboost
-- Le Linear SVC
+- Le gradient Classifier
+- L'adaboost
 
-Une fois fait, nous allons choisir le meilleur algorithme et l'optimiser avec le gridsearchCV.
-
-Nous allons également utiliser des visualisation via T-SNE.
+Ci-joint le lien pour l'API :
+https://github.com/Aurelien07/API_Stackoverflow
