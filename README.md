@@ -4,17 +4,23 @@ Projet_5 : Catégorisez_automatiquement_des_questions
 
 Pour notre analyse sur stackoverflow, nous avons dû créer une requête SQL comme celle ci :
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-SELECT TOP(50000) Id, CreationDate, Score, ViewCount, Title , Tags , AnswerCount, CommentCount, FavoriteCount
+SELECT TOP(50000) Id, CreationDate, Score, ViewCount, Title , Tags , Body, AnswerCount,
+
 FROM Posts
+
 WHERE CreationDate BETWEEN CONVERT(datetime, '2022-01-01') AND CONVERT(datetime, '2022-02-01')
-AND Score IS NOT NULL
-AND ViewCount IS NOT NULL
-AND AnswerCount IS NOT NULL
-AND CommentCount IS NOT NULL
-AND FavoriteCount IS NOT NULL
+
+AND Score > 5
+
+AND ViewCount > 1
+
+AND AnswerCount > 1
+
 ORDER BY CreationDate
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 On a juste dû changer la date de création pour garder les données de Janvier à Juillet.
 
@@ -22,6 +28,7 @@ A partir de là, on fait une bréve analyse des données pour faire des visualis
 
 Ensuite à partir de cette bréve analyse, on va commencer à nettoyer les données textuelles.
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 On va faire comme suit :
 
@@ -32,6 +39,8 @@ On va faire comme suit :
 - Tokennisation
 - P.O.S. Tagging
 - Lemmatisation
+
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Ensuite on fera du Features Engineering pour créer differentes colonnes :
 
@@ -47,6 +56,8 @@ La colonne corpus sera coupé comme suit :
 - 1 colonne corpus avec le corpus sous forme de liste
 - 1 colonne corpus avec le corpus sous forme de array
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
 Ensuite une fois faite :
 
 Nous allons faire des algorithmes non supervisés :
@@ -58,6 +69,8 @@ Nous allons faire des algorithmes non supervisés :
 - le word2cv
 - le BERT
 - le USE
+
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Nous allons également faire des algorithmes supervisés :
 
