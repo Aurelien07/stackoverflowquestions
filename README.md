@@ -1,8 +1,6 @@
- StackOverFlow Tags :
+Projet_5 : Catégorisez_automatiquement_des_questions via StackOverFlow Tags
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-
-Projet_5 : Catégorisez_automatiquement_des_questions
 
 Pour notre analyse sur stackoverflow, nous avons dû créer une requête SQL comme celle ci :
 
